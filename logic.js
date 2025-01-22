@@ -27,25 +27,29 @@ function yearOld() {
 
   Day.innerHTML = d;
   Month.innerHTML = m;
-  Year.innerHTML = y; 
+  Year.innerHTML = y;
 
-  console.log("Days Old : " + d + "Months Old : " + m + "Years Old : " + y ) ; 
+  console.log("Days Old : " + d + "Months Old : " + m + "Years Old : " + y);
 
   if (d < 0) {
-    const today = new Date() ; 
-    const previousMonthDays = new Date(today.getFullYear(), today.getMonth(), 0) ; 
-    d = d + previousMonthDays.getDate() ; 
-    m -= 1 ; 
-    Day.innerHTML = d ; 
-    Month.innerHTML = m ; 
-    Year.innerHTML = y ; 
+    const today = new Date();
+    const previousMonthDays = new Date(
+      today.getFullYear(),
+      today.getMonth(),
+      0
+    );
+    d = d + previousMonthDays.getDate();
+    m -= 1;
+    Day.innerHTML = d;
+    Month.innerHTML = m;
+    Year.innerHTML = y;
   }
 
-  if ( m < 0 ) { 
-    m += 12 ; 
-    y -= 1 ; 
-    Month.innerHTML = m ; 
-    Year.innerHTML = y ; 
+  if (m < 0) {
+    m += 12;
+    y -= 1;
+    Month.innerHTML = m;
+    Year.innerHTML = y;
   }
 }
 
